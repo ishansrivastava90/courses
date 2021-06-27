@@ -1,0 +1,18 @@
+=== Notes ===
+
+Language models use lot of memory and CPU for large n-grams
+
+P(w1) * P(w2|w1) * P(w3|w2,w1)
+
+P(w1,w2,w3) = P(w3|w2,w1) * P(w2,w1)
+            = P(w3|w2,w1) * P(w2|w1) * P(w1)
+
+
+Recurrent Neural network
+--------------------------
+
+Math
+
+h_t = g ((W_h * h_t-1) + (W_x * x_t) + b_h)
+
+y_t = g (W_y * h_t)
